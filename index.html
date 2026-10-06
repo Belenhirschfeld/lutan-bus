@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUTAN BUS - Viajá seguro, viajá cómodo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #001f5c 0%, #003d9f 50%, #0052cc 100%);
+        }
+
+        .section-gradient {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
+        }
+
+        .banner-diagonal {
+            background: linear-gradient(135deg, #001f5c 0%, #003d9f 100%);
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0 85%);
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 31, 92, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #001f5c 0%, #003d9f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #001f5c 0%, #003d9f 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 31, 92, 0.3);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 31, 92, 0.2);
+        }
+
+        .header-logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-1">
+                    <span class="header-logo text-2xl" style="color: #001f5c;">LUTAN</span>
+                    <span class="header-logo text-2xl" style="color: #0052cc;">BUS</span>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#reserva" class="font-semibold text-gray-700 hover:text-blue-600 transition">Reserva</a>
+                    <a href="#servicios" class="font-semibold text-gray-700 hover:text-blue-600 transition">Servicios</a>
+                    <a href="#contacto" class="font-semibold text-gray-700 hover:text-blue-600 transition">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden">
+        <div class="hero-gradient text-white pt-20 pb-32 md:pb-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="mb-6 inline-block">
+                            <span class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-bold">PRÓXIMAMENTE 🚌</span>
+                        </div>
+                        <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
+                            Viajá<br/>seguro,<br/>viajá cómodo
+                        </h1>
+                        <p class="text-xl text-blue-100 mb-8 leading-relaxed font-semibold">
+                            Servicio puerta a puerta entre María Grande y Paraná. Te buscamos en tu puerta, te llevamos a tu destino.
+                        </p>
+                        <a href="#reserva" class="inline-block btn-primary text-white font-black py-4 px-10 rounded-xl mb-8 text-lg">
+                            Reservá tu pasaje
+                        </a>
+                        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white border-opacity-20">
+                            <div>
+                                <div class="text-3xl mb-2">🔒</div>
+                                <p class="text-sm font-bold">Seguro</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">🛋️</div>
+                                <p class="text-sm font-bold">Cómodo</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">⏱️</div>
+                                <p class="text-sm font-bold">Puntual</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-transparent rounded-3xl opacity-20 blur-3xl"></div>
+                        <svg viewBox="0 0 400 350" class="w-full relative z-10">
+                            <defs>
+                                <linearGradient id="vanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f0f4ff;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="40" y="160" width="320" height="90" fill="url(#vanGradient)" stroke="#001f5c" stroke-width="3" rx="10"/>
+                            <rect x="50" y="100" width="300" height="70" fill="#003d9f" stroke="#001f5c" stroke-width="3" rx="15"/>
+                            <rect x="60" y="115" width="50" height="45" fill="#87ceeb" opacity="0.8" rx="5"/>
+                            <rect x="120" y="115" width="50" height="45" fill="#87ceeb" opacity="0.8" rx="5"/>
+                            <rect x="180" y="115" width="50" height="45" fill="#87ceeb" opacity="0.8" rx="5"/>
+                            <rect x="240" y="115" width="50" height="45" fill="#87ceeb" opacity="0.8" rx="5"/>
+                            <circle cx="90" cy="260" r="28" fill="#333"/>
+                            <circle cx="90" cy="260" r="20" fill="#555"/>
+                            <circle cx="330" cy="260" r="28" fill="#333"/>
+                            <circle cx="330" cy="260" r="20" fill="#555"/>
+                            <text x="200" y="205" font-size="24" font-weight="bold" fill="#001f5c" text-anchor="middle" font-family="Arial">LUTAN</text>
+                            <text x="200" y="235" font-size="32" font-weight="900" fill="#0052cc" text-anchor="middle" font-family="Arial">BUS</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="w-full h-auto text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="currentColor"></path>
+        </svg>
+    </div>
+
+    <!-- Reservation Section -->
+    <section id="reserva" class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-gradient mb-4">Reservá tu pasaje</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Simple, seguro y rápido</p>
+
+            <div class="bg-white rounded-3xl card-shadow p-8 md:p-12">
+                <form id="reservaForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-900 mb-3">Ruta</label>
+                            <select id="ruta" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent font-semibold">
+                                <option value="">Seleccionar ruta</option>
+                                <option value="mg-pn">María Grande → Paraná</option>
+                                <option value="pn-mg">Paraná → María Grande</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-900 mb-3">Fecha</label>
+                            <input type="date" id="fecha" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent font-semibold">
+                        </div>
+                    </div>
+
+                    <div id="horariosContainer" class="hidden">
+                        <label class="block text-sm font-bold text-gray-900 mb-3">Horario</label>
+                        <div id="horarios" class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-900 mb-3">Cantidad de pasajes</label>
+                        <div class="flex items-center space-x-4">
+                            <button type="button" id="decrementBtn" class="px-5 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 font-bold text-lg">−</button>
+                            <input type="number" id="cantidad" value="1" min="1" max="11" required class="w-20 px-4 py-3 border-2 border-gray-300 rounded-xl text-center focus:ring-2 focus:ring-blue-500 font-bold text-lg">
+                            <button type="button" id="incrementBtn" class="px-5 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 font-bold text-lg">+</button>
+                            <span class="text-sm text-gray-600 font-semibold">(Máx. 11)</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t-2 border-gray-200">
+                        <h3 class="text-xl font-black text-gray-900 mb-6">Datos del pasajero</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-900 mb-2">Nombre completo</label>
+                                <input type="text" id="nombre" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-900 mb-2">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-900 mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-900 mb-2">Documento (DNI)</label>
+                                <input type="text" id="dni" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-700 font-semibold">Precio por pasaje:</span>
+                            <span class="text-2xl font-black text-gray-900">$18.000</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-3 border-t-2 border-blue-200">
+                            <span class="text-gray-700 font-semibold">Total (<span id="totalPasajes">1</span> pasaje/s):</span>
+                            <span id="totalPrecio" class="text-3xl font-black text-gradient">$18.000</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full btn-primary text-white font-black py-4 px-4 rounded-xl transition duration-200 text-lg">
+                        Continuar al pago
+                    </button>
+                </form>
+
+                <div id="successMessage" class="hidden mt-6 p-6 bg-green-50 border-2 border-green-300 rounded-2xl">
+                    <p class="text-green-900 font-black text-lg">✓ Reserva procesada correctamente</p>
+                    <p class="text-green-700 text-sm mt-2 font-semibold">En breve recibirás la confirmación en tu email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona Section -->
+    <section id="info" class="section-gradient py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-gradient mb-4">Cómo funciona</h2>
+            <p class="text-center text-gray-600 mb-16 text-lg font-semibold">4 pasos simples para viajar seguro</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="feature-card">
+                    <div class="text-6xl mb-6">📱</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-3">Reservá</h3>
+                    <p class="text-gray-600 leading-relaxed font-semibold">Selecciona ruta, fecha, horario y cantidad de pasajes en minutos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-6xl mb-6">💳</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-3">Pagá online</h3>
+                    <p class="text-gray-600 leading-relaxed font-semibold">Completá el pago de forma segura con Mercado Pago</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-6xl mb-6">✉️</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-3">Confirmación</h3>
+                    <p class="text-gray-600 leading-relaxed font-semibold">Recibí tu boleto digital por email y WhatsApp</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-6xl mb-6">🚌</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-3">Viaja</h3>
+                    <p class="text-gray-600 leading-relaxed font-semibold">Te buscamos en tu puerta a la hora indicada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-gradient mb-4">Nuestros servicios</h2>
+            <p class="text-center text-gray-600 mb-16 text-lg font-semibold">Más que transporte, somos tu solución de movilidad</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pasajeros -->
+                <div class="banner-diagonal h-96 p-8 text-white flex flex-col justify-center card-shadow">
+                    <div class="text-6xl mb-4">👥</div>
+                    <h3 class="text-3xl font-black mb-4">Transporte de Pasajeros</h3>
+                    <p class="text-blue-100 mb-8 text-lg font-bold">Viajes seguros y cómodos puerta a puerta</p>
+                    <ul class="space-y-3 text-sm font-semibold">
+                        <li>✓ Servicio puerta a puerta</li>
+                        <li>✓ 11 butacas disponibles</li>
+                        <li>✓ WiFi a bordo</li>
+                        <li>✓ Cámaras de seguridad</li>
+                    </ul>
+                </div>
+
+                <!-- Paquetería -->
+                <div class="banner-diagonal h-96 p-8 text-white flex flex-col justify-center card-shadow" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);">
+                    <div class="text-6xl mb-4">📦</div>
+                    <h3 class="text-3xl font-black mb-4">Servicio de Paquetería</h3>
+                    <p class="text-blue-100 mb-8 text-lg font-bold">Envíos seguros de puerta a puerta</p>
+                    <ul class="space-y-3 text-sm font-semibold">
+                        <li>✓ Seguimiento en tiempo real</li>
+                        <li>✓ Envíos confiables</li>
+                        <li>✓ Tarifas competitivas</li>
+                        <li>✓ Cobertura total María Grande - Paraná</li>
+                    </ul>
+                </div>
+
+                <!-- Viajes Grupales -->
+                <div class="banner-diagonal h-96 p-8 text-white flex flex-col justify-center card-shadow">
+                    <div class="text-6xl mb-4">🎉</div>
+                    <h3 class="text-3xl font-black mb-4">Viajes Grupales</h3>
+                    <p class="text-blue-100 mb-8 text-lg font-bold">Personalizado para tu grupo</p>
+                    <ul class="space-y-3 text-sm font-semibold">
+                        <li>✓ Eventos y empresas</li>
+                        <li>✓ Excursiones personalizadas</li>
+                        <li>✓ Horarios flexibles</li>
+                        <li>✓ Cotización sin compromiso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios Section -->
+    <section id="horarios" class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-gradient mb-4">Horarios</h2>
+            <p class="text-center text-gray-600 mb-16 text-lg font-semibold">Todos los días, múltiples opciones</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- María Grande -->
+                <div class="bg-white rounded-3xl card-shadow p-8 md:p-10">
+                    <h3 class="text-2xl font-black text-gray-900 mb-8">📍 María Grande</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200">
+                            <span class="font-bold text-gray-900">Salida matutina</span>
+                            <span class="text-2xl font-black text-gradient">6:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200">
+                            <span class="font-bold text-gray-900">Salida vespertina</span>
+                            <span class="text-2xl font-black text-gradient">5:00 PM</span>
+                        </div>
+                        <p class="text-sm text-gray-600 text-center mt-6 font-bold">Lunes a Domingo</p>
+                    </div>
+                </div>
+
+                <!-- Paraná -->
+                <div class="bg-white rounded-3xl card-shadow p-8 md:p-10">
+                    <h3 class="text-2xl font-black text-gray-900 mb-8">📍 Paraná</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200">
+                            <span class="font-bold text-gray-900">Salida matutina</span>
+                            <span class="text-2xl font-black text-gradient">1:00 PM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200">
+                            <span class="font-bold text-gray-900">Salida vespertina</span>
+                            <span class="text-2xl font-black text-gradient">8:00 PM</span>
+                        </div>
+                        <p class="text-sm text-gray-600 text-center mt-6 font-bold">Lunes a Domingo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="hero-gradient py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-white mb-4">¿Preguntas o dudas?</h2>
+            <p class="text-center text-blue-100 mb-16 text-lg font-semibold">Estamos a tu disposición</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-7xl mb-6">💬</div>
+                    <h3 class="text-xl font-black text-white mb-3">WhatsApp</h3>
+                    <a href="https://wa.me/5493435358399" class="text-blue-100 hover:text-white font-black text-lg">343 5358399</a>
+                </div>
+                <div class="text-center">
+                    <div class="text-7xl mb-6">📧</div>
+                    <h3 class="text-xl font-black text-white mb-3">Email</h3>
+                    <a href="mailto:lutanbus@gmail.com" class="text-blue-100 hover:text-white font-black text-lg">lutanbus@gmail.com</a>
+                </div>
+                <div class="text-center">
+                    <div class="text-7xl mb-6">🚌</div>
+                    <h3 class="text-xl font-black text-white mb-3">Servicio 24/7</h3>
+                    <p class="text-blue-100 font-semibold">Puerta a puerta siempre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="font-bold">&copy; 2024 LUTAN BUS. Viajá seguro, viajá cómodo, viajá con nosotros.</p>
+        </div>
+    </footer>
+
+    <script>
+        const horariosDispuestos = {
+            'mg-pn': ['6:00 AM', '5:00 PM'],
+            'pn-mg': ['1:00 PM', '8:00 PM']
+        };
+
+        const precioBase = 18000;
+
+        const rutaSelect = document.getElementById('ruta');
+        const fechaInput = document.getElementById('fecha');
+        const cantidadInput = document.getElementById('cantidad');
+        const horariosContainer = document.getElementById('horariosContainer');
+        const horariosDiv = document.getElementById('horarios');
+        const formulario = document.getElementById('reservaForm');
+        const incrementBtn = document.getElementById('incrementBtn');
+        const decrementBtn = document.getElementById('decrementBtn');
+        const totalPrecioSpan = document.getElementById('totalPrecio');
+        const totalPasajesSpan = document.getElementById('totalPasajes');
+        const successMessage = document.getElementById('successMessage');
+
+        const hoy = new Date();
+        const fechaMinima = hoy.toISOString().split('T')[0];
+        fechaInput.setAttribute('min', fechaMinima);
+
+        rutaSelect.addEventListener('change', actualizarHorarios);
+        fechaInput.addEventListener('change', actualizarHorarios);
+
+        function actualizarHorarios() {
+            const rutaSeleccionada = rutaSelect.value;
+            const fechaSeleccionada = fechaInput.value;
+
+            if (rutaSeleccionada && fechaSeleccionada) {
+                const horarios = horariosDispuestos[rutaSeleccionada];
+                horariosDiv.innerHTML = '';
+
+                horarios.forEach(horario => {
+                    const label = document.createElement('label');
+                    label.className = 'flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition';
+                    label.innerHTML = `
+                        <input type="radio" name="horario" value="${horario}" required class="mr-3 w-5 h-5">
+                        <span class="font-bold text-gray-900 text-lg">${horario}</span>
+                    `;
+                    horariosDiv.appendChild(label);
+                });
+
+                horariosContainer.classList.remove('hidden');
+            } else {
+                horariosContainer.classList.add('hidden');
+            }
+        }
+
+        incrementBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (cantidadInput.value < 11) {
+                cantidadInput.value = parseInt(cantidadInput.value) + 1;
+                actualizarTotal();
+            }
+        });
+
+        decrementBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (cantidadInput.value > 1) {
+                cantidadInput.value = parseInt(cantidadInput.value) - 1;
+                actualizarTotal();
+            }
+        });
+
+        cantidadInput.addEventListener('input', actualizarTotal);
+
+        function actualizarTotal() {
+            const cantidad = parseInt(cantidadInput.value) || 1;
+            const total = precioBase * cantidad;
+            totalPrecioSpan.textContent = `$${total.toLocaleString('es-AR')}`;
+            totalPasajesSpan.textContent = cantidad;
+        }
+
+        formulario.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const horarioSeleccionado = document.querySelector('input[name="horario"]:checked');
+            if (!horarioSeleccionado) {
+                alert('Por favor selecciona un horario');
+                return;
+            }
+
+            const reservaData = {
+                ruta: rutaSelect.value,
+                fecha: fechaInput.value,
+                horario: horarioSeleccionado.value,
+                cantidad: cantidadInput.value,
+                total: precioBase * parseInt(cantidadInput.value),
+                pasajero: {
+                    nombre: document.getElementById('nombre').value,
+                    email: document.getElementById('email').value,
+                    telefono: document.getElementById('telefono').value,
+                    dni: document.getElementById('dni').value
+                }
+            };
+
+            console.log('Reserva:', reservaData);
+
+            formulario.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+
+            setTimeout(() => {
+                alert(`✓ Reserva registrada:\n\n${rutaSelect.value}\n${fechaInput.value} a las ${horarioSeleccionado.value}\n\nCantidad: ${cantidadInput.value} pasaje/s\nTotal: $${reservaData.total.toLocaleString('es-AR')}\n\nEn breve recibirás la confirmación en tu email.`);
+            }, 500);
+        });
+
+        actualizarTotal();
+    </script>
+</body>
+</html>
